@@ -1,0 +1,18 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Claude Code internal
+.claude/
+
+# Scratch assets (not referenced by site)
+assets/egac-logo.png
+assets/iaf-mla.png
+assets/opalminds.png
+assets/Signature.jpg
+assets/644922831 QR Code.jpg
+assets/OPALMINDS IT SOLUTIONS PRIVATE LIMITED Line of code.txt
