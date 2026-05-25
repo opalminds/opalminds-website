@@ -47,6 +47,9 @@
 /* === RESET ============================================================= */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Remove tap highlight on iOS/Android */
+a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -105,6 +108,7 @@ h1, h2, h3, h4 {
   justify-content: center;
   gap: 8px;
   padding: 13px 26px;
+  min-height: 44px;
   background: var(--blue);
   color: #fff;
   font-family: var(--font-display);
@@ -135,6 +139,7 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 8px;
   padding: 13px 26px;
+  min-height: 44px;
   border: 1px solid rgba(3, 152, 248, 0.35);
   color: var(--blue);
   font-family: var(--font-display);
@@ -298,8 +303,12 @@ h1, h2, h3, h4 {
   display: none;
   flex-direction: column;
   gap: 5px;
-  padding: 6px 4px;
+  padding: 11px 10px;
   margin-left: auto;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+  align-items: center;
 }
 .nav-toggle span {
   display: block;
@@ -854,9 +863,10 @@ input, textarea {
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 8px;
   padding: 12px 15px;
+  min-height: 44px;
   color: var(--slate);
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px; /* ≥16px prevents iOS auto-zoom on focus */
   line-height: 1.5;
   outline: none;
   transition: border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
@@ -1100,4 +1110,16 @@ input:focus, textarea:focus {
   .section-header h2 { font-size: 26px; }
   .section-header { margin-bottom: 44px; }
   #stats { padding: 36px 0; }
+}
+
+/* Landscape mobile — reduce hero vertical padding so content fits */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-content {
+    padding-top: calc(var(--nav-h) + 24px);
+    padding-bottom: 48px;
+  }
+  .hero-logo { width: clamp(120px, 18vw, 180px); margin-bottom: 16px; }
+  .hero-headline { font-size: clamp(28px, 5.5vw, 48px); margin-bottom: 16px; }
+  .hero-sub { margin-bottom: 24px; }
+  #hero { min-height: unset; }
 }
