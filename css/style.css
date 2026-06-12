@@ -19,8 +19,8 @@
   --ice:            #071018;   /* primary text (charcoal navy) */
   --mist:           #EAF1F7;
   --slate:          #1A2C3A;   /* darkened: was #24313D */
-  --muted:          #3D5166;   /* darkened: was #6B7C8F — now 9:1 on charcoal bg */
-  --muted-2:        #546070;   /* darkened: was #8a9bac — now passes AA */
+  --muted:          #253141;   /* body descriptions — ~13:1 on charcoal */
+  --muted-2:        #3D5166;   /* labels, metadata — ~9:1 on charcoal */
 
   --border:         rgba(3, 152, 248, 0.25);
   --border-subtle:  rgba(0, 0, 0, 0.09);
