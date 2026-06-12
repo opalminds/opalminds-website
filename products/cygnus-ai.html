@@ -979,9 +979,9 @@
 
     /* ── FOOTER ── */
     footer {
-      background: var(--charcoal);
-      border-top: 1px solid var(--border-subtle);
-      padding: 40px 0;
+      background: #0A1520;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 32px 0;
     }
     .footer-inner {
       display: flex;
@@ -990,8 +990,21 @@
       gap: 24px;
       flex-wrap: wrap;
     }
-    .footer-inner img { height: 28px; }
-    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+    }
+    .footer-inner img { height: 26px; object-fit: contain; }
+    .footer-wordmark {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 600;
+      color: #F7FBFF;
+      letter-spacing: -0.02em;
+    }
+    .footer-copy { font-size: 12.5px; color: rgba(247,251,255,0.35); }
     .footer-back {
       display: inline-flex;
       align-items: center;
@@ -999,10 +1012,11 @@
       font-family: var(--font-mono);
       font-size: 12px;
       font-weight: 500;
-      color: var(--muted);
+      color: rgba(247,251,255,0.45);
       transition: color 0.2s ease;
+      text-decoration: none;
     }
-    .footer-back:hover { color: var(--blue); }
+    .footer-back:hover { color: #F7FBFF; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
@@ -1572,13 +1586,12 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <a href="../index.html" aria-label="Opalminds home">
-          <img src="../assets/FullLogo_Transparent_NoBuffer.png" alt="Opalminds">
+        <a href="../index.html" class="footer-brand-link" aria-label="Opalminds home">
+          <img src="../assets/Only_Logo.png" alt="">
+          <span class="footer-wordmark">Opalminds</span>
         </a>
-        <span class="footer-copy">© 2025 Opalminds. All rights reserved.</span>
-        <a href="../index.html" class="footer-back">
-          ← Back to Opalminds
-        </a>
+        <span class="footer-copy">© 2025 Opalminds IT Solutions Private Limited</span>
+        <a href="../index.html" class="footer-back">← Back to Opalminds</a>
       </div>
     </div>
   </footer>
