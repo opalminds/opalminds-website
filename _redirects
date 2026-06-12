@@ -1,0 +1,5 @@
+# Clean URL for product index (if you add products/index.html later)
+/products           /products/cygnus-ai.html    302
+
+# 404 fallback
+/*                  /404.html                   404
