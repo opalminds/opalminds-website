@@ -249,33 +249,6 @@
 })();
 
 
-/* ─── CONTACT FORM ──────────────────────────────────────────────────── */
-(function ContactForm() {
-  const form    = document.getElementById('contact-form');
-  const success = document.getElementById('form-success');
-  if (!form || !success) return;
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-
-    const btn   = form.querySelector('button[type="submit"]');
-    const label = btn.querySelector('.btn-label');
-    const arrow = btn.querySelector('.btn-arrow');
-
-    btn.disabled  = true;
-    label.textContent = 'Sending…';
-    if (arrow) arrow.style.opacity = '0';
-
-    // Simulate async send — replace with real fetch() when backend exists
-    setTimeout(() => {
-      form.reset();
-      btn.style.display = 'none';
-      success.classList.add('show');
-    }, 1400);
-  });
-})();
-
 
 /* ─── SMOOTH ANCHOR SCROLL ──────────────────────────────────────────── */
 (function AnchorScroll() {
