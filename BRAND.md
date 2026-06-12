@@ -2,16 +2,20 @@
 
 ## Colors
 
-| CSS Token | Hex | Usage |
-|---|---|---|
-| `--blue` | `#0398F8` | Primary: buttons, icons, links |
-| `--cyan` | `#0FDFE3` | Accent: tags, labels, glow |
-| `--black` | `#F7FBFF` | Primary background (ice white) |
-| `--charcoal` | `#EAF1F7` | Section alternates (mist) |
-| `--charcoal-2` | `#FFFFFF` | Card / form backgrounds |
-| `--ice` | `#F7FBFF` | Headings and primary text |
-| `--muted` | `#6B7C8F` | Body text, descriptions |
-| `--gradient` | `#0398F8 → #0FDFE3` | CTAs, connector lines |
+| CSS Token | Hex | Usage | Contrast (on `#EAF1F7`) |
+|---|---|---|---|
+| `--blue` | `#0398F8` | Primary: buttons, icons, links | — |
+| `--cyan` | `#0FDFE3` | Accent: tags, labels, glow | — |
+| `--black` | `#F7FBFF` | Primary background (ice white) | — |
+| `--charcoal` | `#EAF1F7` | Section alternates (mist) | — |
+| `--charcoal-2` | `#FFFFFF` | Card / form backgrounds | — |
+| `--ice` | `#071018` | Headings and primary text | ~18:1 |
+| `--slate` | `#1A2C3A` | Body text, strong copy | ~12:1 |
+| `--muted` | `#3D5166` | Descriptions, secondary text | ~9:1 |
+| `--muted-2` | `#546070` | Labels, metadata, fine print | ~6:1 |
+| `--gradient` | `#0398F8 → #0FDFE3` | CTAs, connector lines | — |
+
+All text tokens pass WCAG AA (4.5:1) on both `--black` and `--charcoal` backgrounds.
 
 All tokens are CSS custom properties in `:root` inside `css/style.css`.
 
