@@ -181,7 +181,7 @@
   const cta = document.createElement('a');
   cta.href = '#contact';
   cta.textContent = 'Talk to Us';
-  cta.style.cssText = 'color: #0398F8; font-weight: 600;';
+  cta.style.cssText = 'color: #0A78D0; font-weight: 600;';
   drawer.appendChild(cta);
 
   document.getElementById('nav').after(drawer);

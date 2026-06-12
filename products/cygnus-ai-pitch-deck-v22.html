@@ -5,18 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cygnus-AI — Enterprise Document Intelligence | Opalminds</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
-    --blue: #0398F8; --cyan: #0FDFE3;
+    --blue: #0A78D0; --blue-bright: #0398F8; --cyan: #0FDFE3;
     --black: #F7FBFF; --charcoal: #EAF1F7; --charcoal-2: #FFFFFF;
-    --ice: #0C1E2E; --muted: #6B7C8F;
-    --border-subtle: rgba(12,30,46,0.10);
-    --gradient: linear-gradient(120deg, #0398F8, #0FDFE3);
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'IBM Plex Sans', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --ice: #071018; --slate: #1A2C3A; --muted: #3D5166; --muted-2: #546070;
+    --border-subtle: rgba(0,0,0,0.09);
+    --gradient: linear-gradient(120deg, #0A78D0, #0FDFE3);
+    --font-sans: "Public Sans", system-ui, -apple-system, sans-serif;
+    --font-display: "Public Sans", system-ui, -apple-system, sans-serif;
+    --font-body: "Public Sans", system-ui, -apple-system, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
   }
   html, body { height: 100%; }
   body { font-family: var(--font-body); background: var(--black); color: var(--ice); overflow: hidden; }
@@ -24,7 +25,7 @@
   .glow {
     position: fixed; inset: 0; pointer-events: none; z-index: 0;
     background:
-      radial-gradient(620px 420px at 12% 18%, rgba(3,152,248,0.08), transparent 60%),
+      radial-gradient(620px 420px at 12% 18%, rgba(10,120,208,0.08), transparent 60%),
       radial-gradient(700px 480px at 88% 85%, rgba(15,223,227,0.09), transparent 60%);
   }
   .grid-bg {
@@ -58,10 +59,10 @@
     box-shadow: 0 2px 14px rgba(12,30,46,0.05);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
-  .card:hover { transform: translateY(-4px); border-color: rgba(3,152,248,0.45); box-shadow: 0 10px 28px rgba(3,152,248,0.12); }
+  .card:hover { transform: translateY(-4px); border-color: rgba(10,120,208,0.45); box-shadow: 0 10px 28px rgba(10,120,208,0.12); }
   .icon-wrap {
     width: 44px; height: 44px; border-radius: 12px;
-    background: rgba(3,152,248,0.09); border: 1px solid rgba(3,152,248,0.18);
+    background: rgba(10,120,208,0.09); border: 1px solid rgba(10,120,208,0.18);
     display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
   }
   .icon-wrap svg { width: 22px; height: 22px; stroke: var(--blue); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -82,7 +83,7 @@
 
   .badge {
     display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px;
-    background: rgba(15,223,227,0.12); border: 1px solid rgba(3,152,248,0.35);
+    background: rgba(15,223,227,0.12); border: 1px solid rgba(10,120,208,0.35);
     color: var(--blue); font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600;
     letter-spacing: 0.08em; margin-bottom: 22px;
   }
@@ -107,7 +108,7 @@
   ul.checks li:last-child { border-bottom: none; }
   ul.checks .ck {
     flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
-    background: rgba(3,152,248,0.1); border: 1px solid rgba(3,152,248,0.4);
+    background: rgba(10,120,208,0.1); border: 1px solid rgba(10,120,208,0.4);
     display: flex; align-items: center; justify-content: center; margin-top: 2px;
   }
   ul.checks .ck svg { width: 13px; height: 13px; stroke: var(--blue); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
@@ -123,12 +124,12 @@
     background: var(--gradient); color: #fff;
     font-family: var(--font-display); font-weight: 600; font-size: 1.05rem;
     padding: 16px 38px; border-radius: 12px; border: none; cursor: pointer;
-    box-shadow: 0 8px 26px rgba(3,152,248,0.32);
+    box-shadow: 0 8px 26px rgba(10,120,208,0.32);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none;
   }
   .btn-primary svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(3,152,248,0.4); }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(10,120,208,0.4); }
 
   /* certifications */
   .certs { display: flex; gap: 22px; margin-top: 32px; flex-wrap: wrap; justify-content: center; }
@@ -139,15 +140,15 @@
     box-shadow: 0 2px 14px rgba(12,30,46,0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
-  .cert:hover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(3,152,248,0.14); }
+  .cert:hover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(10,120,208,0.14); }
   .cert .seal {
     flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%;
     border: 2px solid var(--blue);
-    background: radial-gradient(circle at 30% 25%, rgba(15,223,227,0.18), rgba(3,152,248,0.08));
+    background: radial-gradient(circle at 30% 25%, rgba(15,223,227,0.18), rgba(10,120,208,0.08));
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     position: relative;
   }
-  .cert .seal::before { content: ''; position: absolute; inset: 4px; border-radius: 50%; border: 1px dashed rgba(3,152,248,0.5); }
+  .cert .seal::before { content: ''; position: absolute; inset: 4px; border-radius: 50%; border: 1px dashed rgba(10,120,208,0.5); }
   .cert .seal span { font-family: var(--font-mono); font-size: 0.6rem; font-weight: 600; color: var(--blue); line-height: 1.2; text-align: center; position: relative; z-index: 1; }
   .cert .info h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--ice); }
   .cert .info p { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); margin-top: 2px; letter-spacing: 0.03em; }
@@ -167,7 +168,7 @@
     transition: background 0.2s ease;
   }
   .nav button svg { width: 17px; height: 17px; stroke: var(--ice); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-  .nav button:hover { background: rgba(3,152,248,0.12); }
+  .nav button:hover { background: rgba(10,120,208,0.12); }
   .nav .counter { color: var(--muted); font-family: var(--font-mono); font-size: 0.8rem; min-width: 60px; text-align: center; }
 
   .progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); z-index: 10; transition: width 0.4s ease; }
@@ -364,7 +365,7 @@
       <div class="card"><div class="icon-wrap"><svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg></div><h3>Direct Upload</h3><p>Simple drag-and-drop for ad-hoc processing by any team member.</p></div>
       <div class="card"><div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div><h3>Webhook</h3><p>Event-driven ingestion triggered by your upstream systems.</p></div>
       <div class="card"><div class="icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="12" x2="19" y2="19"/><circle cx="19" cy="19" r="3"/><line x1="12" y1="12" x2="5" y2="19"/><circle cx="5" cy="19" r="3"/></svg></div><h3>API</h3><p>Full programmatic control for deep integration into your products and platforms.</p></div>
-      <div class="card" style="border-color:rgba(3,152,248,0.4);"><div class="icon-wrap"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div><h3>Structured Output</h3><p>Results delivered back the same way — API and webhooks for seamless round-trips.</p></div>
+      <div class="card" style="border-color:rgba(10,120,208,0.4);"><div class="icon-wrap"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div><h3>Structured Output</h3><p>Results delivered back the same way — API and webhooks for seamless round-trips.</p></div>
     </div>
   </section>
 
