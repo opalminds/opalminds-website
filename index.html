@@ -22,6 +22,7 @@
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#products">Products</a>
+        <a href="#engagements">Engagements</a>
         <a href="#process">How We Work</a>
         <a href="#founder">Founder</a>
         <a href="#contact">Contact</a>
@@ -62,29 +63,84 @@
     </div>
   </section>
 
-  <!-- ═══ STATS BAR ═════════════════════════════════════════════════════ -->
-  <div id="stats" aria-label="Key capabilities">
+  <!-- ═══ PLATFORM STRIP ══════════════════════════════════════════════ -->
+  <div id="stats" aria-label="Technology platforms">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat">
-          <span class="stat-num">100<span class="stat-unit">%</span></span>
-          <span class="stat-label">AI-Native Approach</span>
+      <div class="platform-strip">
+
+        <div class="platform-group">
+          <span class="platform-group-label">Data</span>
+          <div class="platform-items">
+
+            <div class="platform-item">
+              <div class="platform-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12,2 20,7 20,17 12,22 4,17 4,7"/>
+                  <line x1="4" y1="7" x2="12" y2="12"/>
+                  <line x1="20" y1="7" x2="12" y2="12"/>
+                  <line x1="12" y1="12" x2="12" y2="22"/>
+                </svg>
+              </div>
+              <div class="platform-text">
+                <span class="platform-name">Databricks</span>
+                <span class="platform-desc">Lakehouse · Delta Lake · MLflow</span>
+              </div>
+            </div>
+
+            <div class="platform-item">
+              <div class="platform-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                </svg>
+              </div>
+              <div class="platform-text">
+                <span class="platform-name">AWS</span>
+                <span class="platform-desc">Bedrock · SageMaker · Cloud Infra</span>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat">
-          <span class="stat-num">End&#8209;to&#8209;End</span>
-          <span class="stat-label">Strategy to Production</span>
+
+        <div class="platform-group-div" aria-hidden="true"></div>
+
+        <div class="platform-group">
+          <span class="platform-group-label">AI</span>
+          <div class="platform-items">
+
+            <div class="platform-item">
+              <div class="platform-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+              </div>
+              <div class="platform-text">
+                <span class="platform-name">LangChain</span>
+                <span class="platform-desc">LLM Chains · RAG · Tool Use</span>
+              </div>
+            </div>
+
+            <div class="platform-item">
+              <div class="platform-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="5" r="2"/>
+                  <circle cx="5" cy="19" r="2"/>
+                  <circle cx="19" cy="19" r="2"/>
+                  <line x1="12" y1="7" x2="5.8" y2="17.3"/>
+                  <line x1="12" y1="7" x2="18.2" y2="17.3"/>
+                  <line x1="7" y1="19" x2="17" y2="19"/>
+                </svg>
+              </div>
+              <div class="platform-text">
+                <span class="platform-name">CrewAI</span>
+                <span class="platform-desc">Multi-Agent · Role-Based AI Teams</span>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat">
-          <span class="stat-num">Human<span class="stat-unit">-in-Loop</span></span>
-          <span class="stat-label">Built-In by Design</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat">
-          <span class="stat-num">Multi&#8209;Industry</span>
-          <span class="stat-label">Trade · Finance · Ops</span>
-        </div>
+
       </div>
     </div>
   </div>
@@ -220,6 +276,43 @@
             <div class="product-card-glow" aria-hidden="true"></div>
           </a>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ENGAGEMENTS ══════════════════════════════════════════════════ -->
+    <section id="engagements" aria-labelledby="engagements-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Engagement</span>
+          <h2 id="engagements-heading">Enterprise transformation<br>at operational scale.</h2>
+          <p>We don't only build software — we establish the operational infrastructure that runs it.</p>
+        </div>
+        <div class="engagement-card reveal">
+          <div class="engagement-inner">
+            <div class="engagement-left">
+              <span class="engagement-tag">Manufacturing</span>
+              <div class="engagement-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="1"/>
+                  <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                  <line x1="12" y1="12" x2="12" y2="16"/>
+                  <line x1="10" y1="14" x2="14" y2="14"/>
+                </svg>
+              </div>
+              <h3>Global Capability Center Setup</h3>
+              <p>End-to-end GCC establishment for manufacturing enterprises — organizational design, talent strategy, and AI-powered operational systems built from ground up. We deliver the technology infrastructure that makes the center run, not just the advisory.</p>
+            </div>
+            <div class="engagement-right">
+              <span class="engagement-outcomes-label">What we deliver</span>
+              <ul class="engagement-outcomes">
+                <li>Operational AI dashboards and real-time reporting infrastructure</li>
+                <li>End-to-end process digitisation across manufacturing workflows</li>
+                <li>Cross-site data integration and intelligence pipelines</li>
+                <li>Talent enablement tooling and institutional knowledge systems</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
