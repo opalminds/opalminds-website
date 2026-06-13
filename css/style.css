@@ -554,11 +554,13 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .platform-icon {
   width: 40px;
   height: 40px;
+  min-width: 40px;
   border-radius: 10px;
   background: var(--charcoal-2);
   border: 1px solid var(--border-subtle);
@@ -566,17 +568,20 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
 }
 .platform-icon img {
   width: 22px;
   height: 22px;
   object-fit: contain;
+  display: block;
 }
 
 .platform-text {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  min-width: 0;
 }
 
 .platform-name {
